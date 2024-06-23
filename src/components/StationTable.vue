@@ -24,7 +24,7 @@
   </template>
 
 <script>
-import axios from 'axios';
+import axiosInstance from '../api/axiosInstance';
 
 export default {
   data() {
@@ -33,7 +33,7 @@ export default {
     };
   },
   mounted() {
-    axios.get('/data/loc.json')
+    axiosInstance.get('/8cdafa08-d378-4bf1-aad4-fafffe815940/resource/9febc26f-d6a7-45f2-8f73-f529ba4da930/download')
       .then(response => {
         this.items = response.data.locations;
         console.log(response.data.locations);
