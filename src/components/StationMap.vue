@@ -30,8 +30,8 @@ onMounted(async () => {
 <style scoped>
 .mapContainer {
   width: 100%;
-  height: 30em;
+  height: 50vh;
   border-radius: 1em;
-  border: 0.5em solid teal
+  border: 0.6em solid #1f94ff;
 }
 </style>

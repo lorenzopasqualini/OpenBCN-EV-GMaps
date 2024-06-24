@@ -1,6 +1,6 @@
 <template>
     <header>
-        <h1>Keonn Technologies OpenData BCN EV Charging Stations</h1>
+        <h1>OpenData BCN EV Charging Stations</h1>
     </header>
 </template>
 
