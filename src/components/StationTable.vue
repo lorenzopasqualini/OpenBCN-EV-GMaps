@@ -1,5 +1,6 @@
 <template>
     <button @click="fetchStations">&#10226;</button>
+    <!-- renders only after the fetchStations() function is called and the API request is completed (line 53) -->
     <table v-if="!isLoading">
         <thead>
             <tr>
@@ -35,16 +36,17 @@ export default {
       isLoading: false
     };
   },
+  // make API call on mount for vue3
   mounted() {
     this.fetchStations();
   },
   methods: {
     fetchStations() {
       this.isLoading = true;
+      // use .get method from axiosInstance with corresponding header and authorizations (view /api/axiosInstance for reference)
       axiosInstance.get('/8cdafa08-d378-4bf1-aad4-fafffe815940/resource/9febc26f-d6a7-45f2-8f73-f529ba4da930/download')
         .then(response => {
           this.items = response.data.locations;
-          console.log(response.data.locations);
         })
         .catch(err => {
           console.error(err);
