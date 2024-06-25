@@ -1,17 +1,14 @@
 <template>
     <header>
         <h1>OpenData BCN EV Charging Stations</h1>
+        <img src="/knn-png.png" alt="icon" width="100" height="100">
     </header>
 </template>
 
 <script setup></script>
 
 <style scoped>
-header{
-    display: flex;
-    justify-content: left;
-}
 h1{
-    font-size: 1.5em
+    display: none;
 }
 </style>

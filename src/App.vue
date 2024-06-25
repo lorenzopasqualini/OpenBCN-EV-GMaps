@@ -18,5 +18,8 @@ import StationTable from './components/StationTable.vue';
   flex-direction: column;
   gap: 2em;
   margin: 2em 0;
+  color: #fff;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 </style>

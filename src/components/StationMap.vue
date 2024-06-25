@@ -31,7 +31,7 @@ onMounted(async () => {
 .mapContainer {
   width: 100%;
   height: 50vh;
-  border-radius: 1em;
-  border: 0.6em solid #1f94ff;
+  border-radius: 0.2em;
+  border: 0.4em solid rgba(128, 128, 128, 0.2);
 }
 </style>
