@@ -1,8 +1,8 @@
 {
-    "rewrites": [
-      {
-        "source": "/api/:match*",
-        "destination": "https://opendata-ajuntament.barcelona.cat/api/:match*"
-      }
-    ]
-  }
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
