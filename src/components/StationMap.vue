@@ -8,7 +8,7 @@ const apiKey = import.meta.env.VITE_GMAPS_API_KEY
 
 onMounted(async () => {
   try {
-    const response = await axiosInstance.get('/8cdafa08-d378-4bf1-aad4-fafffe815940/resource/9febc26f-d6a7-45f2-8f73-f529ba4da930/download');
+    const response = await axiosInstance.get('/data/dataset/8cdafa08-d378-4bf1-aad4-fafffe815940/resource/9febc26f-d6a7-45f2-8f73-f529ba4da930/download');
     // assign latitute and longitude values plus its ID to then map the stations in GMaps
     locations.value = response.data.locations.map(item => ({
       lat: item.coordinates.latitude,

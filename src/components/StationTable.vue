@@ -44,7 +44,7 @@ export default {
     fetchStations() {
       this.isLoading = true;
       // use .get method from axiosInstance with corresponding header and authorizations (view /api/axiosInstance for reference)
-      axiosInstance.get('/8cdafa08-d378-4bf1-aad4-fafffe815940/resource/9febc26f-d6a7-45f2-8f73-f529ba4da930/download')
+      axiosInstance.get('/data/dataset/8cdafa08-d378-4bf1-aad4-fafffe815940/resource/9febc26f-d6a7-45f2-8f73-f529ba4da930/download')
         .then(response => {
           this.items = response.data.locations;
         })
