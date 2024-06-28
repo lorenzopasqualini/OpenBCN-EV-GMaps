@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "https://knt-test.vercel.app/api/data/dataset/:path*",
+      "source": "/api/:path*",
       "destination": "https://opendata-ajuntament.barcelona.cat/api/data/dataset/:path*"
     }
   ]
