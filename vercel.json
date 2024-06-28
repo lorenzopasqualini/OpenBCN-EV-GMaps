@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "source": "/api/data/dataset/:path*",
+      "destination": "https://opendata-ajuntament.barcelona.cat/api/data/dataset/:path*"
     }
   ]
 }
