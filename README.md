@@ -1,35 +1,43 @@
-# knn-test
+### Framework + build tool
+- `vue3`
+- `vite`
+- `Google Cloud Platform`
+> [!NOTE]
+> No external UI libraries or styling frameworks were used for both simplicity's sake and to use vanilla HTML and CSS as much as possible.
 
-This template should help get you started developing with Vue 3 in Vite.
+### Dependencies
+- `axios`
+- `vue3-google-map`
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
+### Installation
+> [!IMPORTANT]
+>For this project I decided to go with Bun instead of the more traditional NPM or PNPM.
+```
+git clone https://github.com/lorenzopasqualini/knt-test.git
+```
+```
+cd knt-test
+```
+```
 bun install
 ```
-
-### Compile and Hot-Reload for Development
-
-```sh
+```
 bun dev
 ```
 
-### Compile and Minify for Production
-
-```sh
-bun build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-bun lint
-```
+### CORS
+A proxy server had to be set up during development in order to handle the API request from **OpenData BCN** with a token to go along with it. Due to CORS restrictions though, the same could not be replicated for production in Vercel, and thus the API calls can only be made locally.
+```js
+// vite.config.js
+export default defineConfig({
+  plugins: [vue()],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://opendata.bcn.cat/data/api',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
+  }
+});
